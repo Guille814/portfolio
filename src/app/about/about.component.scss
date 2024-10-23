@@ -1,0 +1,44 @@
+#about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 80px 20px;
+    text-align: left;
+  
+    .about-container {
+      max-width: 800px;
+      margin: 0 auto;
+  
+      h2 {
+        font-size: 3rem;
+        color: #64ffda; /* Acento de color */
+        text-align: center;
+        margin-bottom: 40px;
+      }
+  
+      p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+        color: #ddd;
+      }
+  
+      /* Añadir algo de sombra a la sección para destacarla más */
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  
+      /* Añadir animación de aparición progresiva */
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+  
+    /* Aparecer al hacer scroll */
+    &.visible .about-container {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
