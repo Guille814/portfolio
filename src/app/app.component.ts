@@ -1,11 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { AboutComponent } from './about/about.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
-import { HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -14,38 +13,46 @@ import { HostListener } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-
 export class AppComponent {
   title = 'Portfolio';
+  isScrolled = false; // Inicializamos la propiedad isScrolled
 
-  // Controlar la visibilidad del menú y la animación del título
+  sections: HTMLElement[] = [];
+
+  ngAfterViewInit() {
+    // Obtenemos todas las secciones después de que la vista se ha inicializado
+    this.sections = Array.from(document.querySelectorAll('section'));
+    this.updateSectionVisibility();
+  }
+
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
-    const scrollPosition = window.pageYOffset;
-    const header = document.querySelector('header');
-    const titleElement = document.querySelector('#home h1');
-    const sections = document.querySelectorAll('section');
+    const scrollPosition = window.scrollY;
 
     // Mostrar el menú al hacer scroll
-    if (scrollPosition > 100) {
+    const header = document.querySelector('header');
+    this.isScrolled = scrollPosition > 100; // Actualizamos la propiedad isScrolled
+
+    if (this.isScrolled) {
       header?.classList.add('menu-visible');
     } else {
       header?.classList.remove('menu-visible');
     }
 
-    // Hacer que el título desaparezca al hacer scroll
-    if (scrollPosition > 50) {
-      titleElement?.classList.add('scrolled-title');
-    } else {
-      titleElement?.classList.remove('scrolled-title');
-    }
+    // Actualizar visibilidad de las secciones
+    this.updateSectionVisibility();
+  }
 
-    // Hacer que las secciones aparezcan al hacer scroll
-    sections.forEach((section) => {
+  private updateSectionVisibility() {
+    this.sections.forEach(section => {
       const sectionTop = section.getBoundingClientRect().top;
-      const windowHeight = window.innerHeight;
-      if (sectionTop < windowHeight - 100) {
+      const viewportHeight = window.innerHeight;
+
+      // Verificamos si la sección está en el viewport
+      if (sectionTop < viewportHeight - 100 && sectionTop > 0) {
         section.classList.add('visible');
+      } else {
+        section.classList.remove('visible');
       }
     });
   }
