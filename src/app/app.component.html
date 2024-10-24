@@ -1,35 +1,17 @@
-<header [class.menu-visible]="isScrolled">
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<div class="center-line"></div>
+<div class="parallel-line-1"></div>
+<div class="parallel-line-2"></div>
+<div class="parallel-line-3"></div>
+<div class="parallel-line-4"></div>
+<a routerLink="" class="logo">G</a>
 
-<div id="home" [class.scrolled]="isScrolled">
-  <div class="intro-container">
-    <h1>Hi, I’m Guille</h1>
-    <p>I’m a Web Developer</p>
-    <p class="sub-text"><i>Creating beautiful and functional web experiences.</i></p>
-  </div>
-</div>
-
-<section id="about" class="section">
-  <h2>About Me</h2>
-  <p>This section contains information about me and my background.</p>
-</section>
-<section id="skills" class="section">
-  <h2>Skills</h2>
-  <p>This section lists my skills and expertise.</p>
-</section>
-<section id="projects" class="section">
-  <h2>Projects</h2>
-  <p>This section showcases my projects and achievements.</p>
-</section>
-<section id="contact" class="section">
-  <h2>Contact</h2>
-  <p>This section contains my contact information.</p>
-</section>
+<button 
+    class="work-button" 
+    (mouseover)="showEmail()" 
+    (mouseout)="showDefault()" 
+    (click)="copyToClipboard('guilleibannez@gmail.com')">
+    <span *ngIf="buttonText === 'Available for Work'">
+        <img src="/historia.png" alt="Icono" class="icon" />
+    </span>
+    {{ buttonText }}
+</button>

@@ -1,59 +1,30 @@
-import { Component, HostListener } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
-import { AboutComponent } from './about/about.component';
-import { SkillsComponent } from './skills/skills.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { ContactComponent } from './contact/contact.component';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common'; // Importa CommonModule
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, AboutComponent, SkillsComponent, ProjectsComponent, ContactComponent],
+  imports: [CommonModule], // Agrega CommonModule aquí
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'Portfolio';
-  isScrolled = false; // Inicializamos la propiedad isScrolled
+  buttonText: string = 'Available for Work';
 
-  sections: HTMLElement[] = [];
-
-  ngAfterViewInit() {
-    // Obtenemos todas las secciones después de que la vista se ha inicializado
-    this.sections = Array.from(document.querySelectorAll('section'));
-    this.updateSectionVisibility();
+  showEmail() {
+    this.buttonText = 'guilleibannez@gmail.com';
   }
 
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll() {
-    const scrollPosition = window.scrollY;
-
-    // Mostrar el menú al hacer scroll
-    const header = document.querySelector('header');
-    this.isScrolled = scrollPosition > 100; // Actualizamos la propiedad isScrolled
-
-    if (this.isScrolled) {
-      header?.classList.add('menu-visible');
-    } else {
-      header?.classList.remove('menu-visible');
-    }
-
-    // Actualizar visibilidad de las secciones
-    this.updateSectionVisibility();
+  showDefault() {
+    this.buttonText = 'Available for Work';
   }
 
-  private updateSectionVisibility() {
-    this.sections.forEach(section => {
-      const sectionTop = section.getBoundingClientRect().top;
-      const viewportHeight = window.innerHeight;
-
-      // Verificamos si la sección está en el viewport
-      if (sectionTop < viewportHeight - 100 && sectionTop > 0) {
-        section.classList.add('visible');
-      } else {
-        section.classList.remove('visible');
-      }
+  copyToClipboard(email: string) {
+    navigator.clipboard.writeText(email).then(() => {
+      console.log('Correo copiado al portapapeles: ' + email);
+    }).catch(err => {
+      console.error('Error al copiar el correo: ', err);
     });
   }
 }

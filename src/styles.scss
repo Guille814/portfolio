@@ -1,133 +1,97 @@
 body {
+  background-color: #111; /* Fondo gris muy oscuro */
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #121212;
-  color: #e0e0e0;
-  overflow-x: hidden; // Prevent horizontal scroll
+  padding: 0;
+  font-family: 'Roboto', sans-serif; /* O la fuente de tu preferencia */
 }
 
-#home {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  transition: opacity 0.5s ease; // Transition for fading out
-
-  &.scrolled {
-    opacity: 0; // Fade out when scrolled
-  }
-
-  .intro-container {
-    h1 {
-      font-size: 3.5rem;
-      font-weight: 700;
-      margin: 0;
-      color: #ffffff;
-      transition: color 0.3s ease;
-    }
-
-    p {
-      font-size: 1.5rem;
-      font-weight: 300;
-      margin: 10px 0 20px 0;
-      color: #9e9e9e;
-    }
-
-    .sub-text {
-      font-size: 1.2rem;
-      font-weight: 300;
-      color: #9e9e9e;
-    }
-  }
+.center-line,
+.parallel-line-1,
+.parallel-line-2,
+.parallel-line-3,
+.parallel-line-4 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #383838; /* Gris oscuro */
+  transform: scaleX(0.1); /* Mantiene la línea fina */
 }
 
-header {
-  position: fixed;
-  top: -80px; // Ocultar el menú fuera de la vista
-  width: 100%;
-  background-color: transparent;
-  color: #e0e0e0;
-  z-index: 1000;
-  padding: 10px;
-  transition: top 0.3s ease;
-
-  nav {
-    display: flex;
-    justify-content: center;
-
-    ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-
-      li {
-        a {
-          color: #e0e0e0;
-          text-decoration: none;
-          padding: 10px;
-          transition: color 0.3s ease;
-
-          &:hover {
-            color: #64ffda; // Accent color
-          }
-        }
-      }
-    }
-  }
+/* Línea central */
+.center-line {
+  left: 50%;
+  transform: scaleX(0.1) translateX(-50%);
 }
 
-header.menu-visible {
-  top: 0; // Mostrar menú al hacer scroll
+/* Primera línea paralela a la izquierda */
+.parallel-line-1 {
+  left: 33%; /* Distancia deseada a la izquierda de la línea central */
+  transform: scaleX(0.1) translateX(-50%);
 }
 
-@media (max-width: 768px) {
-  header {
-    top: -80px; // Mantener el menú oculto
-  }
-  header.menu-visible {
-    top: 0; // Mostrar menú al hacer scroll en móvil
-  }
+/* Segunda línea paralela a la derecha */
+.parallel-line-2 {
+  left: 67%; /* Distancia deseada a la derecha de la línea central */
+  transform: scaleX(0.1) translateX(-50%);
 }
 
-.section {
-  height: 100vh; // Each section takes full viewport height
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #1a1a1a; // Background for sections
+/* Tercera línea paralela a la izquierda */
+.parallel-line-3 {
+  left: 16%; /* Ajusta este valor para que esté más cerca de la línea izquierda */
+  transform: scaleX(0.1) translateX(-50%);
 }
 
-/* Scroll Animation for Sections */
-section {
-  opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+/* Cuarta línea paralela a la derecha */
+.parallel-line-4 {
+  left: 84%; /* Ajusta este valor para que esté más cerca de la línea derecha */
+  transform: scaleX(0.1) translateX(-50%);
 }
 
-section.visible {
-  opacity: 1;
-  transform: translateY(0);
+.logo {
+  position: absolute; /* Para posicionar en la esquina superior izquierda */
+  top: 30px; /* Ajusta este valor para el margen superior */
+  left: 16.5%; /* Ajusta este valor para que esté más cerca de la línea izquierda */
+  color: #383838; /* Color normal */
+  font-size: 45px; /* Ajusta el tamaño de la fuente según tu preferencia */
+  font-weight: bold; /* Establece el grosor de la fuente, opcional */
+  text-decoration: none; /* Elimina el subrayado del enlace */
+  transition: color 0.2s;
+  cursor: pointer; /* Cambia el cursor a la forma de mano */
 }
 
-.section {
-  height: 100vh; // Cada sección ocupa la altura completa del viewport
-  display: flex;
-  flex-direction: column; // Permite que los elementos se apilen verticalmente
-  justify-content: center;
-  align-items: center;
-  background-color: #1a1a1a; // Color de fondo para secciones
-  color: #e0e0e0; // Color de texto
-  padding: 20px; // Espaciado interno
-  text-align: center; // Centra el texto
-
-  h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-  }
-
-  p {
-    font-size: 1.2rem;
-    max-width: 600px; // Limita el ancho del texto para mejor legibilidad
-  }
+.logo:hover {
+  color: #dbdbdb; /* Cambia a blanco al pasar el ratón */
 }
+
+.work-button {
+  position: absolute;
+  top: 30px; /* Alineado a la misma altura que la "G" */
+  right: 16.5%; /* Ajusta este valor para la distancia desde la derecha */
+  background-color: #111; /* Mismo color que el fondo */
+  color: #dbdbdb; /* Color de texto igual al gris de las líneas */
+  border: 1px solid #383838; /* Añadir un borde del mismo color que las líneas */
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 15px 20px; /* Espaciado interno */
+  font-size: 12px; /* Tamaño de la fuente */
+  cursor: pointer; /* Cambia el cursor a mano */
+  transition: background-color 0.3s, color 0.3s; /* Transición para el cambio de color */
+  font-weight: bold;
+  display: flex; /* Usar flexbox para centrar */
+  align-items: center; /* Alinear verticalmente el contenido */
+  justify-content: center; /* Alinear horizontalmente el contenido */
+  height: 50px; /* Altura del botón (ajusta según sea necesario) */
+}
+
+.work-button:hover {
+  background-color: #dbdbdb; /* Cambia a gris claro al hacer hover */
+  color: #111; /* Cambia el color del texto al color del fondo al hacer hover */
+}
+
+.icon {
+  display: inline; /* Asegúrate de que no esté en display: none; */
+  width: 24px; /* Ajusta el tamaño del icono según tus preferencias */
+  height: 24px; /* Ajusta el tamaño del icono según tus preferencias */
+  margin-right: 10px; /* Espaciado entre el icono y el texto */
+}
+
