@@ -3,15 +3,21 @@
 <div class="parallel-line-2"></div>
 <div class="parallel-line-3"></div>
 <div class="parallel-line-4"></div>
-<a routerLink="" class="logo">G</a>
+<a (click)="reloadPage()" class="logo">G</a>
 
-<button 
-    class="work-button" 
-    (mouseover)="showEmail()" 
-    (mouseout)="showDefault()" 
-    (click)="copyToClipboard('guilleibannez@gmail.com')">
-    <span *ngIf="buttonText === 'Available for Work'">
-        <img src="/historia.png" alt="Icono" class="icon" />
-    </span>
-    {{ buttonText }}
-</button>
+<div style="position: relative; display: flex; align-items: center;">
+  <button 
+      class="work-button" 
+      (mouseover)="showEmail()" 
+      (mouseout)="showDefault()" 
+      (click)="copyToClipboard('guilleibannez@gmail.com')">
+      <span *ngIf="buttonText === 'Available for Work'">
+          <img src="/historia.png" alt="Icono" class="icon" />
+      </span>
+      {{ buttonText }}
+  </button>
+  <div class="copied-message" [ngClass]="{'show': showCopiedText}">
+      Copied
+  </div>
+</div>
+

@@ -50,7 +50,7 @@ body {
 
 .logo {
   position: absolute; /* Para posicionar en la esquina superior izquierda */
-  top: 30px; /* Ajusta este valor para el margen superior */
+  top: 50px; /* Ajusta este valor para el margen superior */
   left: 16.5%; /* Ajusta este valor para que esté más cerca de la línea izquierda */
   color: #383838; /* Color normal */
   font-size: 45px; /* Ajusta el tamaño de la fuente según tu preferencia */
@@ -66,7 +66,7 @@ body {
 
 .work-button {
   position: absolute;
-  top: 30px; /* Alineado a la misma altura que la "G" */
+  top: 50px; /* Alineado a la misma altura que la "G" */
   right: 16.5%; /* Ajusta este valor para la distancia desde la derecha */
   background-color: #111; /* Mismo color que el fondo */
   color: #dbdbdb; /* Color de texto igual al gris de las líneas */
@@ -94,4 +94,42 @@ body {
   height: 24px; /* Ajusta el tamaño del icono según tus preferencias */
   margin-right: 10px; /* Espaciado entre el icono y el texto */
 }
+
+.copied-message {
+  position: absolute;
+  right: 27%;
+  top: 55px;
+  color: #dbdbdb;
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0;
+  white-space: nowrap;
+  z-index: 1;
+  background-color: #383838;
+  padding: 10px 15px;
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.copied-message.show {
+  animation: slideUpFade 1.5s ease-in-out forwards;
+}
+
+/* Definición de la animación */
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translateY(7px); /* Empieza más abajo */
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0); /* Llega a la posición original */
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-7px); /* Desvanece hacia arriba */
+  }
+}
+
+
 
