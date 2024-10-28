@@ -1,8 +1,15 @@
+@font-face {
+  font-family: 'monserrat';
+  src: url('./assets/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  background-color: #111; /* Fondo gris muy oscuro */
+  background-color: #0a0a0a; /* Fondo gris muy oscuro */
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif; /* O la fuente de tu preferencia */
+  font-family: 'monserrat', Arial, sans-serif; /* Helvetica como prioridad */
 }
 
 .center-line,
@@ -127,6 +134,49 @@ body {
   }
 
 }
+
+.intro-text {
+  position: absolute;
+  top: 20%; /* Mantiene su posición vertical central */
+  left: 16.5%; /* Cambia a 50% para centrar */
+  transform: translate(-50%, -50%); /* Centro del elemento */
+  color: #dbdbdb;
+  font-size: 84px;
+  font-weight: bold;
+  font-family: 'monserrat', Arial, sans-serif;
+  line-height: 1.5;
+  opacity: 0; /* Inicia invisible */
+  animation: slideUpInitial 1.5s ease forwards; /* Aparece primero */
+  animation-delay: 0.2s; /* Para un breve retraso */
+}
+
+
+@keyframes fadeInEffect {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeInEffect 1.5s ease-in-out;
+  opacity: 1; /* Asegura que quede visible al final de la animación */
+}
+
+@keyframes slideUpInitial {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Inicia un poco abajo */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Llega a su posición */
+  }
+}
+
+
 
 
 

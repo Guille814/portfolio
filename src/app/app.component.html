@@ -3,11 +3,17 @@
 <div class="parallel-line-2"></div>
 <div class="parallel-line-3"></div>
 <div class="parallel-line-4"></div>
-<a (click)="reloadPage()" class="logo">G</a>
+
+<!-- Logo con animación -->
+<a (click)="reloadPage()" class="logo" [ngClass]="{'fade-in': fadeIn}">
+  GUI
+</a>
 
 <div style="position: relative; display: flex; align-items: center;">
+  <!-- Botón con animación -->
   <button 
       class="work-button" 
+      [ngClass]="{'fade-in': fadeIn}" 
       (mouseover)="showEmail()" 
       (mouseout)="showDefault()" 
       (click)="copyToClipboard('guilleibannez@gmail.com')">
@@ -16,8 +22,13 @@
       </span>
       {{ buttonText }}
   </button>
+
   <div class="copied-message" [ngClass]="{'show': showCopiedText}">
       Copied
   </div>
 </div>
 
+<div class="intro-text">
+    <p>Hello, I'm Guille.</p>
+    <p>A web application developer.</p>
+</div>
