@@ -288,17 +288,11 @@ body {
 
 
 
-
-
-
-
-
-
 /* RESPONSIVE PARA MOVILES*/
 @media (max-width: 768px) {
 
   body {
-    background-color: #0a0a0a;
+    background-color: #0f0f0f;
     margin: 0;
     padding: 0;
     font-family: 'monserrat', Arial, sans-serif;
@@ -312,11 +306,10 @@ body {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 1px;
-    background-color: #383838;
+    width: 11px;
+    background-color: #242424;
     /* Gris oscuro */
-    transform: scaleX(0.1);
-    /* Mantiene la línea fina */
+    transform: scaleX(1);
   }
 
   /* Línea central */
@@ -541,7 +534,7 @@ body {
   .thirt-line,
   .fourth-line {
     position: absolute;
-    left: 50%; /* Alinea la línea desde el centro */
+    left: 51%; /* Alinea la línea desde el centro */
     height: 2px; /* Grosor de la línea */
     background-color: #b6b6b6; /* Color de la línea */
     transform: translateX(-100%) translateX(-50%); /* Inicia fuera de la vista a la izquierda */
