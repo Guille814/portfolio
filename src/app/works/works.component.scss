@@ -4,30 +4,76 @@
     .work-category {
         padding: 20px; // Espacio interno
 
-        .masterd {
+        .masterd,
+        .teltronic,
+        .masteraudio {
             color: #dbdbdb !important;
             position: absolute;
             font-size: 72px;
+        }
+
+        .masterd {
             top: 60%;
             left: 17%;
         }
 
-        .current-title {
+        .teltronic {
+            top: 70%;
+            left: 17%;
+        }
+
+        .masteraudio {
+            top: 80%;
+            left: 17%;
+        }
+
+        .current-title,
+        .p2022-title,
+        .p2021-title {
             color: #dbdbdb !important;
             position: absolute;
             font-size: 16px;
             font-weight: bold;
+        }
+
+        .current-title {
             top: 63%;
             left: 51%;
         }
 
-        .current-expl {
+        .p2022-title {
+            top: 73%;
+            left: 51%;
+        }
+
+        .p2021-title {
+            top: 83%;
+            left: 51%;
+        }
+
+        .current-expl,
+        .p2022-expl,
+        .p2021-expl {
             color: #636363 !important;
             position: absolute;
             font-size: 16px;
+        }
+
+        .current-expl {
             top: 65%;
             left: 51%;
         }
+
+        .p2022-expl {
+            top: 75%;
+            left: 51%;
+        }
+
+        .p2021-expl {
+            top: 85%;
+            left: 51%;
+        }
+
     }
 
     .work,
@@ -51,40 +97,91 @@
 
 
 
+
+
+
 /* RESPONSIVE PARA MOVILES*/
 @media (max-width: 768px) {
     .works-container {
         font-family: 'Montserrat', sans-serif; // Aplica la fuente Montserrat
-    
+
         .work-category {
             padding: 20px; // Espacio interno
-    
-            .masterd {
+
+            .masterd,
+            .teltronic,
+            .masteraudio {
                 color: #dbdbdb !important;
                 position: absolute;
                 font-size: 48px;
+
+            }
+
+            .masterd {
                 top: 40%;
                 left: 7%;
             }
-    
-            .current-title {
+
+            .teltronic {
+                top: 53%;
+                left: 7%;
+            }
+
+            .masteraudio {
+                top: 66%;
+                left: 7%;
+            }
+
+            .current-title,
+            .p2022-title,
+            .p2021-title {
                 color: #dbdbdb !important;
                 position: absolute;
                 font-size: 16px;
                 font-weight: bold;
+
+            }
+
+            .current-title {
                 top: 46%;
                 left: 7%;
             }
-    
-            .current-expl {
+
+            .p2022-title {
+                top: 59%;
+                left: 7%;
+            }
+
+            .p2021-title {
+                top: 72%;
+                left: 7%;
+            }
+
+            .current-expl,
+            .p2022-expl,
+            .p2021-expl {
                 color: #636363 !important;
                 position: absolute;
                 font-size: 16px;
+            }
+
+            .current-expl {
                 top: 48%;
                 left: 7%;
             }
+
+            .p2022-expl {
+                top: 61%;
+                left: 7%;
+            }
+
+            .p2021-expl {
+                top: 74%;
+                left: 7%;
+            }
+
         }
-    
+
         .work,
         .details {
             color: #dbdbdb !important;
@@ -93,11 +190,11 @@
             font-weight: bold;
             top: 37%;
         }
-    
+
         .work {
             left: 7%;
         }
-    
+
         .details {
             left: 50.5%;
             opacity: 0;
