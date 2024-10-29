@@ -1,0 +1,106 @@
+.works-container {
+    font-family: 'Montserrat', sans-serif; // Aplica la fuente Montserrat
+
+    .work-category {
+        padding: 20px; // Espacio interno
+
+        .masterd {
+            color: #dbdbdb !important;
+            position: absolute;
+            font-size: 72px;
+            top: 60%;
+            left: 17%;
+        }
+
+        .current-title {
+            color: #dbdbdb !important;
+            position: absolute;
+            font-size: 16px;
+            font-weight: bold;
+            top: 63%;
+            left: 51%;
+        }
+
+        .current-expl {
+            color: #636363 !important;
+            position: absolute;
+            font-size: 16px;
+            top: 65%;
+            left: 51%;
+        }
+    }
+
+    .work,
+    .details {
+        color: #dbdbdb !important;
+        position: absolute;
+        font-size: 24px;
+        font-weight: bold;
+        top: 57%;
+    }
+
+    .work {
+        left: 16.5%;
+    }
+
+    .details {
+        left: 50.5%;
+    }
+}
+
+
+
+
+/* RESPONSIVE PARA MOVILES*/
+@media (max-width: 768px) {
+    .works-container {
+        font-family: 'Montserrat', sans-serif; // Aplica la fuente Montserrat
+    
+        .work-category {
+            padding: 20px; // Espacio interno
+    
+            .masterd {
+                color: #dbdbdb !important;
+                position: absolute;
+                font-size: 48px;
+                top: 40%;
+                left: 7%;
+            }
+    
+            .current-title {
+                color: #dbdbdb !important;
+                position: absolute;
+                font-size: 16px;
+                font-weight: bold;
+                top: 46%;
+                left: 7%;
+            }
+    
+            .current-expl {
+                color: #636363 !important;
+                position: absolute;
+                font-size: 16px;
+                top: 48%;
+                left: 7%;
+            }
+        }
+    
+        .work,
+        .details {
+            color: #dbdbdb !important;
+            position: absolute;
+            font-size: 16px;
+            font-weight: bold;
+            top: 37%;
+        }
+    
+        .work {
+            left: 7%;
+        }
+    
+        .details {
+            left: 50.5%;
+            opacity: 0;
+        }
+    }
+}

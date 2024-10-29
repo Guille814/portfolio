@@ -1,34 +1,38 @@
-<div class="center-line"></div>
-<div class="parallel-line-1"></div>
-<div class="parallel-line-2"></div>
-<div class="parallel-line-3"></div>
-<div class="parallel-line-4"></div>
+<div class="container">
+  <div class="center-line"></div>
+  <div class="parallel-line-1"></div>
+  <div class="parallel-line-2"></div>
+  <div class="parallel-line-3"></div>
+  <div class="parallel-line-4"></div>
 
-<!-- Logo con animación -->
-<a (click)="reloadPage()" class="logo" [ngClass]="{'fade-in': fadeIn}">
-  GUI
-</a>
+  <!-- Logo con animación -->
+  <a (click)="reloadPage()" class="logo" [ngClass]="{'fade-in': fadeIn}">
+    GUI
+  </a>
 
-<div style="position: relative; display: flex; align-items: center;">
-  <!-- Botón con animación -->
-  <button 
-      class="work-button" 
-      [ngClass]="{'fade-in': fadeIn}" 
-      (mouseover)="showEmail()" 
-      (mouseout)="showDefault()" 
+  <div style="position: relative; display: flex; align-items: center;">
+    <!-- Botón con animación -->
+    <button class="work-button" [ngClass]="{'fade-in': fadeIn}" (mouseover)="showEmail()" (mouseout)="showDefault()"
       (click)="copyToClipboard('guilleibannez@gmail.com')">
       <span *ngIf="buttonText === 'Available for Work'">
-          <img src="/historia.png" alt="Icono" class="icon" />
+        <img src="/historia.png" alt="Icono" class="icon" />
       </span>
       {{ buttonText }}
-  </button>
+    </button>
 
-  <div class="copied-message" [ngClass]="{'show': showCopiedText}">
+    <div class="copied-message" [ngClass]="{'show': showCopiedText}">
       Email Copied
+    </div>
   </div>
-</div>
 
-<div class="intro-text">
+  <div class="intro-text">
     <p>Hello, I'm Guille.</p>
     <p class="p2">A web application developer.</p>
+  </div>
+
+  <div class="first-line" [class.visible]="isVisible"></div>
+  <div class="second-line" [class.visible]="isVisible"></div>
+<!--div class="thirt-line"></div>
+<div class="fourth-line"></div-->
+  <app-works></app-works>
 </div>

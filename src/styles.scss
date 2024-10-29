@@ -12,8 +12,14 @@
   font-style: normal;
 }
 
+.container {
+  position: relative; /* Asegúrate de que el contenedor tenga posición relativa */
+  height: 200vh; /* Aumenta la altura del contenedor para permitir el scroll */
+
+}
+
 body {
-  background-color: #0a0a0a;
+  background-color: #0f0f0f;
   /* Fondo gris muy oscuro */
   margin: 0;
   padding: 0;
@@ -25,12 +31,13 @@ body {
 .parallel-line-1,
 .parallel-line-2,
 .parallel-line-3,
-.parallel-line-4 {
+.parallel-line-4
+{
   position: absolute;
   top: 0;
   bottom: 0;
   width: 1px;
-  background-color: #383838;
+  background-color: #242424;
   /* Gris oscuro */
   transform: scaleX(0.1);
   /* Mantiene la línea fina */
@@ -70,6 +77,8 @@ body {
   transform: scaleX(0.1) translateX(-50%);
 }
 
+
+
 .logo {
   position: absolute;
   /* Para posicionar en la esquina superior izquierda */
@@ -101,7 +110,7 @@ body {
   /* Alineado a la misma altura que la "G" */
   right: 16.5%;
   /* Ajusta este valor para la distancia desde la derecha */
-  background-color: #111;
+  background-color: #0f0f0f;
   /* Mismo color que el fondo */
   color: #dbdbdb;
   /* Color de texto igual al gris de las líneas */
@@ -131,7 +140,7 @@ body {
 .work-button:hover {
   background-color: #dbdbdb;
   /* Cambia a gris claro al hacer hover */
-  color: #111;
+  color: #0f0f0f;
   /* Cambia el color del texto al color del fondo al hacer hover */
 }
 
@@ -184,7 +193,7 @@ body {
 
 .intro-text {
   position: absolute;
-  top: 20%;
+  top: 10%;
   /* Mantiene su posición vertical central */
   left: 16.5%;
   /* Cambia a 50% para centrar */
@@ -234,6 +243,45 @@ body {
 }
 
 
+.first-line,
+.second-line {
+  position: absolute;
+  left: 50%;  /* Alinea la línea desde el centro */
+  height: 2px; /* Grosor de la línea */
+  background-color: #b6b6b6; /* Color de la línea */
+  transform: translateX(-50%) scaleX(0); /* Inicia con una escala de 0 (invisible) */
+  opacity: 0; /* Oculta la línea inicialmente */
+  transition: opacity 0.8s ease, transform 0.8s ease; /* Transiciones más lentas para suavizar la aparición */
+  width: 68%; /* Ancho de la línea */
+  top: 70%; 
+}
+
+.first-line.visible ,
+.second-line.visible{
+  transform: translateX(-50%) scaleX(1); /* Mueve la línea a su posición original y escala a 1 (visible) */
+  opacity: 1; /* Muestra la línea */
+}
+
+.first-line {
+  width: 68%; /* Cambia el ancho de la línea central */
+  top: 60%; 
+}
+
+.second-line{
+  width: 68%; /* Cambia el ancho de la línea central */
+  top: 70%; 
+}
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE PARA MOVILES*/
 @media (max-width: 768px) {
 
   body {
@@ -404,7 +452,7 @@ body {
 
   .intro-text {
     position: absolute;
-    top: 30%;
+    top: 10%;
     /* Mantiene su posición vertical central */
     left: 8%;
     /* Cambia a 50% para centrar */
@@ -471,6 +519,35 @@ body {
       transform: translateY(0);
       /* Llega a su posición */
     }
+  }
+
+  .first-line,
+  .second-line {
+    position: absolute;
+    left: 50%;  /* Alinea la línea desde el centro */
+    height: 2px; /* Grosor de la línea */
+    background-color: #b6b6b6; /* Color de la línea */
+    transform: translateX(-50%) scaleX(0); /* Inicia con una escala de 0 (invisible) */
+    opacity: 0; /* Oculta la línea inicialmente */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Transiciones más lentas para suavizar la aparición */
+    width: 68%; /* Ancho de la línea */
+    top: 70%; 
+  }
+  
+  .first-line.visible,
+  .second-line.visible {
+    transform: translateX(-50%) scaleX(1); /* Mueve la línea a su posición original y escala a 1 (visible) */
+    opacity: 1; /* Muestra la línea */
+  }
+  
+  .first-line {
+    width: 88%; /* Cambia el ancho de la línea central */
+    top: 40%; 
+  }
+
+  .second-line{
+    width: 88%;
+    top:53%;
   }
 
 }
