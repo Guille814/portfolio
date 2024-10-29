@@ -1,27 +1,24 @@
-# Portfolio
+# Guille's Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.9.
+Este proyecto es un portafolio de presentación personal desarrollado en **Angular**. Está diseñado para mostrar mis habilidades, proyectos, y experiencia en desarrollo de aplicaciones web de una forma interactiva y moderna.
 
-## Development server
+## 🚀 Tecnologías y Herramientas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Angular**: Framework principal del proyecto.
+- **TypeScript**: Lenguaje de programación para un código más robusto y estructurado.
+- **HTML5 y CSS3**: Para la estructura y el diseño visual de las páginas.
+- **Sass (SCSS)**: Preprocesador CSS utilizado para un diseño modular y organizado.
+- **JavaScript**: Para mejorar la interacción y funcionalidades avanzadas.
+- **Angular Animations**: Animaciones personalizadas que realzan la experiencia del usuario.
+- **Git**: Control de versiones para mantener el historial de cambios.
+- **Vercel**: Plataforma de alojamiento para el despliegue del frontend.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🌟 Características del Portafolio
 
-## Build
+- **Página de bienvenida**: Con un mensaje inicial de introducción que utiliza una animación especial para destacar el contenido de apertura.
+- **Secciones organizadas**: Contiene secciones como “About Me”, “Projects” y “Contact” con acceso fácil desde el menú.
+- **Animación de scroll**: Las secciones y elementos se muestran gradualmente al hacer scroll.
+- **Copiar correo**: Un botón para copiar el correo electrónico al portapapeles con un mensaje de confirmación visual.
+- **Diseño responsive**: Compatible con dispositivos móviles, tabletas y computadoras de escritorio.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

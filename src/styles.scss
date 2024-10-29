@@ -5,11 +5,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'monserrat bold';
+  src: url('./assets/fonts/Montserrat-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  background-color: #0a0a0a; /* Fondo gris muy oscuro */
+  background-color: #0a0a0a;
+  /* Fondo gris muy oscuro */
   margin: 0;
   padding: 0;
-  font-family: 'monserrat', Arial, sans-serif; /* Helvetica como prioridad */
+  font-family: 'monserrat', Arial, sans-serif;
+  /* Helvetica como prioridad */
 }
 
 .center-line,
@@ -21,8 +30,10 @@ body {
   top: 0;
   bottom: 0;
   width: 1px;
-  background-color: #383838; /* Gris oscuro */
-  transform: scaleX(0.1); /* Mantiene la línea fina */
+  background-color: #383838;
+  /* Gris oscuro */
+  transform: scaleX(0.1);
+  /* Mantiene la línea fina */
 }
 
 /* Línea central */
@@ -33,73 +44,106 @@ body {
 
 /* Primera línea paralela a la izquierda */
 .parallel-line-1 {
-  left: 33%; /* Distancia deseada a la izquierda de la línea central */
+  left: 33%;
+  /* Distancia deseada a la izquierda de la línea central */
   transform: scaleX(0.1) translateX(-50%);
 }
 
 /* Segunda línea paralela a la derecha */
 .parallel-line-2 {
-  left: 67%; /* Distancia deseada a la derecha de la línea central */
+  left: 67%;
+  /* Distancia deseada a la derecha de la línea central */
   transform: scaleX(0.1) translateX(-50%);
 }
 
 /* Tercera línea paralela a la izquierda */
 .parallel-line-3 {
-  left: 16%; /* Ajusta este valor para que esté más cerca de la línea izquierda */
+  left: 16%;
+  /* Ajusta este valor para que esté más cerca de la línea izquierda */
   transform: scaleX(0.1) translateX(-50%);
 }
 
 /* Cuarta línea paralela a la derecha */
 .parallel-line-4 {
-  left: 84%; /* Ajusta este valor para que esté más cerca de la línea derecha */
+  left: 84%;
+  /* Ajusta este valor para que esté más cerca de la línea derecha */
   transform: scaleX(0.1) translateX(-50%);
 }
 
 .logo {
-  position: absolute; /* Para posicionar en la esquina superior izquierda */
-  top: 50px; /* Ajusta este valor para el margen superior */
-  left: 16.5%; /* Ajusta este valor para que esté más cerca de la línea izquierda */
-  color: #383838; /* Color normal */
-  font-size: 45px; /* Ajusta el tamaño de la fuente según tu preferencia */
-  font-weight: bold; /* Establece el grosor de la fuente, opcional */
-  text-decoration: none; /* Elimina el subrayado del enlace */
+  position: absolute;
+  /* Para posicionar en la esquina superior izquierda */
+  top: 50px;
+  /* Ajusta este valor para el margen superior */
+  left: 16.5%;
+  /* Ajusta este valor para que esté más cerca de la línea izquierda */
+  color: #383838;
+  /* Color normal */
+  font-size: 45px;
+  /* Ajusta el tamaño de la fuente según tu preferencia */
+  font-weight: bold;
+  /* Establece el grosor de la fuente, opcional */
+  text-decoration: none;
+  /* Elimina el subrayado del enlace */
   transition: color 0.2s;
-  cursor: pointer; /* Cambia el cursor a la forma de mano */
+  cursor: pointer;
+  /* Cambia el cursor a la forma de mano */
 }
 
 .logo:hover {
-  color: #dbdbdb; /* Cambia a blanco al pasar el ratón */
+  color: #dbdbdb;
+  /* Cambia a blanco al pasar el ratón */
 }
 
 .work-button {
   position: absolute;
-  top: 50px; /* Alineado a la misma altura que la "G" */
-  right: 16.5%; /* Ajusta este valor para la distancia desde la derecha */
-  background-color: #111; /* Mismo color que el fondo */
-  color: #dbdbdb; /* Color de texto igual al gris de las líneas */
-  border: 1px solid #383838; /* Añadir un borde del mismo color que las líneas */
-  border-radius: 10px; /* Bordes redondeados */
-  padding: 10px 10px; /* Espaciado interno */
-  font-size: 12px; /* Tamaño de la fuente */
-  cursor: pointer; /* Cambia el cursor a mano */
-  transition: background-color 0.3s, color 0.3s; /* Transición para el cambio de color */
+  top: 50px;
+  /* Alineado a la misma altura que la "G" */
+  right: 16.5%;
+  /* Ajusta este valor para la distancia desde la derecha */
+  background-color: #111;
+  /* Mismo color que el fondo */
+  color: #dbdbdb;
+  /* Color de texto igual al gris de las líneas */
+  border: 1px solid #383838;
+  /* Añadir un borde del mismo color que las líneas */
+  border-radius: 10px;
+  /* Bordes redondeados */
+  padding: 10px 10px;
+  /* Espaciado interno */
+  font-size: 12px;
+  /* Tamaño de la fuente */
+  cursor: pointer;
+  /* Cambia el cursor a mano */
+  transition: background-color 0.3s, color 0.3s;
+  /* Transición para el cambio de color */
   font-weight: bold;
-  display: flex; /* Usar flexbox para centrar */
-  align-items: center; /* Alinear verticalmente el contenido */
-  justify-content: center; /* Alinear horizontalmente el contenido */
-  height: 50px; /* Altura del botón (ajusta según sea necesario) */
+  display: flex;
+  /* Usar flexbox para centrar */
+  align-items: center;
+  /* Alinear verticalmente el contenido */
+  justify-content: center;
+  /* Alinear horizontalmente el contenido */
+  height: 50px;
+  /* Altura del botón (ajusta según sea necesario) */
 }
 
 .work-button:hover {
-  background-color: #dbdbdb; /* Cambia a gris claro al hacer hover */
-  color: #111; /* Cambia el color del texto al color del fondo al hacer hover */
+  background-color: #dbdbdb;
+  /* Cambia a gris claro al hacer hover */
+  color: #111;
+  /* Cambia el color del texto al color del fondo al hacer hover */
 }
 
 .icon {
-  display: inline; /* Asegúrate de que no esté en display: none; */
-  width: 24px; /* Ajusta el tamaño del icono según tus preferencias */
-  height: 24px; /* Ajusta el tamaño del icono según tus preferencias */
-  margin-right: 5px; /* Espaciado entre el icono y el texto */
+  display: inline;
+  /* Asegúrate de que no esté en display: none; */
+  width: 24px;
+  /* Ajusta el tamaño del icono según tus preferencias */
+  height: 24px;
+  /* Ajusta el tamaño del icono según tus preferencias */
+  margin-right: 5px;
+  /* Espaciado entre el icono y el texto */
 }
 
 .copied-message {
@@ -126,28 +170,36 @@ body {
 @keyframes slideUpFade {
   0% {
     opacity: 0;
-    transform: translateY(7px); /* Empieza más abajo */
+    transform: translateY(7px);
+    /* Empieza más abajo */
   }
+
   50% {
     opacity: 1;
-    transform: translateY(0); /* Llega a la posición original */
+    transform: translateY(0);
+    /* Llega a la posición original */
   }
 
 }
 
 .intro-text {
   position: absolute;
-  top: 20%; /* Mantiene su posición vertical central */
-  left: 16.5%; /* Cambia a 50% para centrar */
-  transform: translate(-50%, -50%); /* Centro del elemento */
+  top: 20%;
+  /* Mantiene su posición vertical central */
+  left: 16.5%;
+  /* Cambia a 50% para centrar */
+  transform: translate(-50%, -50%);
+  /* Centro del elemento */
   color: #dbdbdb;
   font-size: 84px;
-  font-weight: bold;
-  font-family: 'monserrat', Arial, sans-serif;
+  font-family: 'monserrat bold', Arial, sans-serif;
   line-height: 1.5;
-  opacity: 0; /* Inicia invisible */
-  animation: slideUpInitial 1.5s ease forwards; /* Aparece primero */
-  animation-delay: 0.2s; /* Para un breve retraso */
+  opacity: 0;
+  /* Inicia invisible */
+  animation: slideUpInitial 1.5s ease forwards;
+  /* Aparece primero */
+  animation-delay: 0.2s;
+  /* Para un breve retraso */
 }
 
 
@@ -155,6 +207,7 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -162,21 +215,262 @@ body {
 
 .fade-in {
   animation: fadeInEffect 1.5s ease-in-out;
-  opacity: 1; /* Asegura que quede visible al final de la animación */
+  opacity: 1;
+  /* Asegura que quede visible al final de la animación */
 }
 
 @keyframes slideUpInitial {
   0% {
     opacity: 0;
-    transform: translateY(20px); /* Inicia un poco abajo */
+    transform: translateY(20px);
+    /* Inicia un poco abajo */
   }
+
   100% {
     opacity: 1;
-    transform: translateY(0); /* Llega a su posición */
+    transform: translateY(0);
+    /* Llega a su posición */
   }
 }
 
 
+@media (max-width: 768px) {
+
+  body {
+    background-color: #0a0a0a;
+    margin: 0;
+    padding: 0;
+    font-family: 'monserrat', Arial, sans-serif;
+  }
+
+  .center-line,
+  .parallel-line-1,
+  .parallel-line-2,
+  .parallel-line-3,
+  .parallel-line-4 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #383838; /* Gris oscuro */
+    transform: scaleX(0.1); /* Mantiene la línea fina */
+  }
+
+  /* Línea central */
+  .center-line {
+    left: 50%;
+    transform: scaleX(0.1) translateX(-50%);
+  }
+
+  /* Primera línea paralela a la izquierda */
+  .parallel-line-1 {
+    left: 28%;
+    /* Distancia deseada a la izquierda de la línea central */
+    transform: scaleX(0.1) translateX(-50%);
+  }
+
+  /* Segunda línea paralela a la derecha */
+  .parallel-line-2 {
+    left: 72%;
+    /* Distancia deseada a la derecha de la línea central */
+    transform: scaleX(0.1) translateX(-50%);
+  }
+
+  /* Tercera línea paralela a la izquierda */
+  .parallel-line-3 {
+    left: 6%;
+    /* Ajusta este valor para que esté más cerca de la línea izquierda */
+    transform: scaleX(0.1) translateX(-50%);
+  }
+
+  /* Cuarta línea paralela a la derecha */
+  .parallel-line-4 {
+    left: 94%;
+    /* Ajusta este valor para que esté más cerca de la línea derecha */
+    transform: scaleX(0.1) translateX(-50%);
+  }
+
+  .logo {
+    position: absolute;
+    /* Para posicionar en la esquina superior izquierda */
+    top: 30px;
+    /* Ajusta este valor para el margen superior */
+    left: 8%;
+    /* Ajusta este valor para que esté más cerca de la línea izquierda */
+    color: #383838;
+    /* Color normal */
+    font-size: 45px;
+    /* Ajusta el tamaño de la fuente según tu preferencia */
+    font-weight: bold;
+    /* Establece el grosor de la fuente, opcional */
+    text-decoration: none;
+    /* Elimina el subrayado del enlace */
+    transition: color 0.2s;
+    cursor: pointer;
+    /* Cambia el cursor a la forma de mano */
+  }
+
+  .logo:hover {
+    color: #dbdbdb;
+    /* Cambia a blanco al pasar el ratón */
+  }
+
+  .work-button {
+    position: absolute;
+    top: 30px;
+    /* Alineado a la misma altura que la "G" */
+    right: 8%;
+    /* Ajusta este valor para la distancia desde la derecha */
+    background-color: #111;
+    /* Mismo color que el fondo */
+    color: #dbdbdb;
+    /* Color de texto igual al gris de las líneas */
+    border: 1px solid #383838;
+    /* Añadir un borde del mismo color que las líneas */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    padding: 8px 8px;
+    /* Espaciado interno */
+    font-size: 12px;
+    /* Tamaño de la fuente */
+    cursor: pointer;
+    /* Cambia el cursor a mano */
+    transition: background-color 0.3s, color 0.3s;
+    /* Transición para el cambio de color */
+    font-weight: bold;
+    display: flex;
+    /* Usar flexbox para centrar */
+    align-items: center;
+    /* Alinear verticalmente el contenido */
+    justify-content: center;
+    /* Alinear horizontalmente el contenido */
+    height: 50px;
+    /* Altura del botón (ajusta según sea necesario) */
+  }
+
+  .work-button:hover {
+    background-color: #dbdbdb;
+    /* Cambia a gris claro al hacer hover */
+    color: #111;
+    /* Cambia el color del texto al color del fondo al hacer hover */
+  }
+
+  .icon {
+    display: inline;
+    /* Asegúrate de que no esté en display: none; */
+    width: 24px;
+    /* Ajusta el tamaño del icono según tus preferencias */
+    height: 24px;
+    /* Ajusta el tamaño del icono según tus preferencias */
+    margin-right: 5px;
+    /* Espaciado entre el icono y el texto */
+  }
+
+  .copied-message {
+    position: absolute;
+    right: 12%;
+    top: 85px;
+    color: #dbdbdb;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+    white-space: nowrap;
+    z-index: 1;
+    background-color: #383838;
+    padding: 10px 15px;
+    border-radius: 10px;
+    pointer-events: none;
+  }
+
+  .copied-message.show {
+    animation: slideUpFade 1.5s ease-in-out forwards;
+  }
+
+  /* Definición de la animación */
+  @keyframes slideUpFade {
+    0% {
+      opacity: 0;
+      transform: translateY(7px);
+      /* Empieza más abajo */
+    }
+
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+      /* Llega a la posición original */
+    }
+
+  }
+
+  .intro-text {
+    position: absolute;
+    top: 30%;
+    /* Mantiene su posición vertical central */
+    left: 8%;
+    /* Cambia a 50% para centrar */
+    transform: translate(-50%, -50%);
+    /* Centro del elemento */
+    color: #dbdbdb;
+    font-size: 48px;
+    font-family: 'monserrat bold', Arial, sans-serif;
+    line-height: 1.5;
+    opacity: 0;
+    /* Inicia invisible */
+    animation: slideUpInitial 1.5s ease forwards;
+    /* Aparece primero */
+    animation-delay: 0.2s;
+    /* Para un breve retraso */
+  }
+
+  .p2{
+    position: absolute;
+    top:  75%;
+    /* Mantiene su posición vertical central */
+    left: 1%;
+    /* Cambia a 50% para centrar */
+    transform: translate(-50%, -50%);
+    /* Centro del elemento */
+    color: #747474;
+    font-size: 24px;
+    font-family: 'monserrat', Arial, sans-serif;
+    line-height: 1.5;
+    opacity: 0;
+    /* Inicia invisible */
+    animation: slideUpInitial 1.5s ease forwards;
+    /* Aparece primero */
+    animation-delay: 0.2s;
+    /* Para un breve retraso */
+  }
 
 
+  @keyframes fadeInEffect {
+    from {
+      opacity: 0;
+    }
 
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    animation: fadeInEffect 1.5s ease-in-out;
+    opacity: 1;
+    /* Asegura que quede visible al final de la animación */
+  }
+
+  @keyframes slideUpInitial {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+      /* Inicia un poco abajo */
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+      /* Llega a su posición */
+    }
+  }
+
+}
