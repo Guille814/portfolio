@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   buttonText: string = 'Available for Work';
   showCopiedText: boolean = false;
   fadeIn: boolean = false;
-  isVisible: boolean = false; // Propiedad para controlar la visibilidad
+  isVisible: boolean[] = [false, false, false, false]; // Arreglo para controlar la visibilidad de cada línea
 
   ngOnInit() {
     // Activa la clase fade-in para los elementos después de cargar el componente
@@ -26,10 +26,25 @@ export class AppComponent implements OnInit {
   @HostListener('window:scroll', [])
   onScroll() {
     const scrollY = window.scrollY || window.pageYOffset;
+
     if (scrollY > 50) {
-      this.isVisible = true; // Muestra la línea
+      // Solo activamos la primera línea si es visible
+      if (!this.isVisible[0]) {
+        this.isVisible[0] = true; // Muestra la primera línea
+        setTimeout(() => {
+          this.isVisible[1] = true; // Muestra la segunda línea después de un retraso
+        }, 300); // Ajusta el tiempo para el retraso de la segunda línea
+
+        setTimeout(() => {
+          this.isVisible[2] = true; // Muestra la tercera línea después de un retraso
+        }, 600); // Ajusta el tiempo para el retraso de la tercera línea
+
+        setTimeout(() => {
+          this.isVisible[3] = true; // Muestra la cuarta línea después de un retraso
+        }, 900); // Ajusta el tiempo para el retraso de la cuarta línea
+      }
     } else {
-      this.isVisible = false; // Oculta la línea
+      this.isVisible.fill(false); // Oculta todas las líneas
     }
   }
 
